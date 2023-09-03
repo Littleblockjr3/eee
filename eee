@@ -3399,8 +3399,10 @@ function library:CreateWindow(name, size, hidebutton)
 
         function tab:CreateConfigSystem(side)
             local configSystem = { }
+			local gamename = marketplaceservice:GetProductInfo(game.PlaceId).Name
 
-            configSystem.configFolder = window.name .. "/" .. game.PlaceId .. game.Name
+
+            configSystem.configFolder = window.name .. "/" .. tostring(gamename)
             if (not isfolder(configSystem.configFolder)) then
                 makefolder(configSystem.configFolder)
             end
