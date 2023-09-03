@@ -3402,7 +3402,7 @@ function library:CreateWindow(name, size, hidebutton)
 			local gamename = marketplaceservice:GetProductInfo(game.PlaceId).Name
 
 
-            configSystem.configFolder = window.name .. "/" .. tostring(gamename)
+            configSystem.configFolder = window.name .. "/" .. gamename
             if (not isfolder(configSystem.configFolder)) then
                 makefolder(configSystem.configFolder)
             end
